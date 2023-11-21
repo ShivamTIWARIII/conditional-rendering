@@ -19,7 +19,8 @@ const ExpenseItem=(props)=>{
     console.log(title)
   }
   const deleteHandler=()=>{
-    setAmount(100)
+    setAmount(100)      
+
     console.log(amount)
   }
     return (
