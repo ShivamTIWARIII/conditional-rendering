@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ExpenseItem from './components/ExpenseItem';
 import NewExpense from './components/NewExpense';
+import Expenses from './components/Expenses';
 
 const App = () => {
   const [expenses, setExpenses] = useState([
@@ -37,15 +38,7 @@ const App = () => {
     <div>
       <h1>It's my first react js project!</h1>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-      {expenses.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-          location={expense.LocationOfExpenditure}
-        ></ExpenseItem>
-      ))}
+      <Expenses items={expenses} />
     </div>
   );
 };
